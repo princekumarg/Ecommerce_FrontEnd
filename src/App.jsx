@@ -4,6 +4,8 @@ import Home from './pages/Home'
 import Layout from './components/Layout'
 import Cart from './pages/Cart'
 import Login from './pages/Login'
+import { Provider } from 'react-redux'
+import {store} from './store'
 const router=createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout/>}>
@@ -18,7 +20,9 @@ function App() {
 
   return (
     <>
-      <RouterProvider router={router} />
+      <Provider store={store}>
+        <RouterProvider router={router} />
+      </Provider>
     </>
   )
 }
