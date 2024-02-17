@@ -8,6 +8,7 @@ import { Provider } from 'react-redux'
 import {store} from './store'
 import Checkout from './pages/Checkout'
 import AuthProvider, { useAuth } from './firebase/Auth'
+import Register from './pages/Register'
 function ProtectedRoute({children}){
   const {user}=useAuth();
   if(!user){
@@ -27,6 +28,7 @@ const router=createBrowserRouter(
           </ProtectedRoute>}/>
       </Route>
     <Route path='/login' element={<Login/>}/>
+    <Route path='/register' element={<Register/>}/>
     </>
     
   )

@@ -1,5 +1,5 @@
 import { LockOutlined } from '@mui/icons-material';
-import { Avatar, Box, Button, Container, CssBaseline, TextField, Typography, useTheme } from '@mui/material'
+import { Avatar, Box, Button, Container, CssBaseline, TextField, Typography, useTheme,Grid,Link } from '@mui/material'
 import React from 'react'
 import { useAuth } from '../firebase/Auth';
 import { useNavigate } from 'react-router-dom';
@@ -64,6 +64,11 @@ export default function Login() {
             margin:theme.spacing(3,0,2)
           }}>sign In</Button>
         </form>
+        <Grid container justifyContent={"flex-end"}>
+                <Grid item>
+                    <Link variant='body2' href="/register">Create an account? Sign Up</Link>
+                </Grid>
+        </Grid>
       </Box>
     </Container>
   )
