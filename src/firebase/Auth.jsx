@@ -28,11 +28,12 @@ export const useAuth = () => useContext(AuthContext);
 function useProvideAuth(){
     const [user,setUser]=useState();
 
-    const signUp=(email,password,displayName)=>createUserWithEmailAndPassword(email,password).then(({user})=>{
-        updateProfile(user,{ displayName });
-        setUser(user);
-        return user;
-    })
+    const signUp = (email, password, displayName) =>
+    createUserWithEmailAndPassword(auth, email, password).then(({ user }) => {
+      updateProfile(user, { displayName });
+      setUser(user);
+      return user;
+    });
     const signIn = (email, password) =>
       signInWithEmailAndPassword(auth, email, password).then(({ user }) => {
       setUser(user);
