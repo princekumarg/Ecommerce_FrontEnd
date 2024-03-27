@@ -6,12 +6,12 @@ import {createUserWithEmailAndPassword, getAuth, updateProfile,signInWithEmailAn
 import { useState,useEffect,useContext,createContext } from "react";
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDAyGLno4oBVChGoDpzW5uANi3Stoc64wE",
-  authDomain: "e-commerce-29f2d.firebaseapp.com",
-  projectId: "e-commerce-29f2d",
-  storageBucket: "e-commerce-29f2d.appspot.com",
-  messagingSenderId: "841483772527",
-  appId: "1:841483772527:web:b1604becdd02aef8f5239a"
+  apiKey:import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID
 };
 
 // Initialize Firebase
